@@ -30,8 +30,8 @@ nano $HOME/.credit/credit.conf
 
 Paste the following lines in credit.conf.
 
-rpcuser=rpc_credit
-rpcpassword=69c863e3356d3dae95df454a1
+rpcuser=your_username
+rpcpassword=your_password
 rpcallowip=127.0.0.1
 listen=1
 server=1
