@@ -12,7 +12,7 @@ Install the necessary dependencies using the following commands.
 sudo apt-get install build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev
 sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
 
-Download the daemon file from github https://github.com/Terra-Credit-Union/credit-daemon-linux
+Download the daemon file from github https://github.com/The-Terra-Foundation/credit-daemon-linux
 
 Extract the tar file using the following command.
 
