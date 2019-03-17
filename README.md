@@ -1,56 +1,27 @@
-Install Ubuntu Server 18.04 on a VPS.
+Install the required dependencies.
 
--Update your Ubuntu machine.
+sudo apt-get install build-essential libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev
 
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
 
+Create a directory for the source code.
 
--Install the required dependencies.
+mkdir source_code
 
-sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libboost-all-dev libboost-program-options-dev
-sudo apt-get install libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler unzip software-properties-common
+cd source_code
 
+Download the source code
 
--Install Berkeley DB.
+wget "https://terra-credit.com/credit-source.tar.gz" -O credit-source.tar.gz
 
-sudo add-apt-repository ppa:bitcoin/bitcoin
-sudo apt-get update
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
+Extract the tar file.
 
+tar -xzvf credit-source.tar.gz
 
--Download the daemon
+Go to the src directory of your source code.
 
-wget "https://github.com/The-Terra-Foundation/credit-daemon-linux/master/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
+cd src
 
+Execute the following command to compile the daemon.
 
--Extract the tar files.
-
-tar -xzvf credit-daemon-linux.tar.gz
-
-
--Install the daemon and tools.
-
-sudo mv creditd credit-cli credit-tx /usr/bin/
-
-
--Create the config file.
-
-mkdir $HOME/.credit
-nano $HOME/.credit/credit.conf
-
-
--Paste the following lines in credit.conf.
-
-rpcuser=rpc_credit
-rpcpassword=69c863e3356d3dae95df454a1
-rpcallowip=127.0.0.1
-listen=1
-server=1
-txindex=1
-daemon=1
-
-
--Start your node with the following command.
-
-creditd
+make -f makefile.unix RELEASE=1
