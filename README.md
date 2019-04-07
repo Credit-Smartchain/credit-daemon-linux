@@ -33,12 +33,19 @@ nano $HOME/.credit/credit.conf
 Paste the following lines in credit.conf.
 
 rpcuser=rpc_credit (example)
+
 rpcpassword=69c863e3356d3dae95df454a1 (Example)
+
 rpcallowip=127.0.0.1
+
 listen=1
+
 server=1
+
 txindex=1
+
 daemon=1
+
 
 Start your node with the following command.
 
