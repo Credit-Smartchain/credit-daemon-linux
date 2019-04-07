@@ -14,7 +14,7 @@ sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev lib
 
 Download the source code
 
-wget "https://terra-credit.com/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
+wget "https://github.com/The-Terra-Foundation/credit-daemon-linux/master/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
 
 Extract the tar file.
 
@@ -32,20 +32,13 @@ nano $HOME/.credit/credit.conf
 
 Paste the following lines in credit.conf.
 
-rpcuser=rpc_credit (example)
-
-rpcpassword=69c863e3356d3dae95df454a1 (Example)
-
+rpcuser=rpc_credit
+rpcpassword=69c863e3356d3dae95df454a1
 rpcallowip=127.0.0.1
-
 listen=1
-
 server=1
-
 txindex=1
-
 daemon=1
-
 
 Start your node with the following command.
 
