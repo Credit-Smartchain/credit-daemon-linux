@@ -12,11 +12,11 @@ cd source_code
 
 Download the source code
 
-wget "https://terra-credit.com/credit-daemon-linux.tar.gz" -O credit-source.tar.gz
+wget "https://terra-credit.com/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
 
 Extract the tar file.
 
-tar -xzvf credit-source.tar.gz
+tar -xzvf credit-daemon-linux.tar.gz
 
 Go to the src directory of your source code.
 
