@@ -14,7 +14,7 @@ sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev lib
 
 Download the source code
 
-wget "https://github.com/The-Terra-Foundation/credit-daemon-linux/master/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
+wget "https://terra-credit.com/credit-daemon-linux.tar.gz" -O credit-daemon-linux.tar.gz
 
 Extract the tar file.
 
